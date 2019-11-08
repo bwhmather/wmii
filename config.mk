@@ -33,10 +33,6 @@ X11PACKAGES = x11 xinerama xrender xrandr
 INCX11 = $$(pkg-config --cflags $(X11PACKAGES))
 LIBIXP = $(LIBDIR)/libixp.a
 
-# Enable RTLD. Only necessary for Xft support.
-CFLAGS += -DHAVE_RTLD
-LDFLAGS += -ldl # Comment this out on BSD systems.
-
 SOLDFLAGS += $(LDFLAGS)
 SHARED = -shared -Wl,-soname=$(SONAME)
 STATIC = -static
