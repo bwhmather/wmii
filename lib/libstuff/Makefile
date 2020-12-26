@@ -52,6 +52,7 @@ OBJ=\
 	map		\
 	printevent	\
 	util/_die	\
+	util/args	\
 	util/closeexec	\
 	util/comm	\
 	util/doublefork	\
