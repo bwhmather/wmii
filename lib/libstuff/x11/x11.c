@@ -3,6 +3,9 @@
  */
 #include "x11.h"
 
+Display *display = NULL;
+Screen scr = { 0 };
+
 const Point	ZP = {0, 0};
 const Rectangle	ZR = {{0, 0}, {0, 0}};
 
