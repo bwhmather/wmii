@@ -52,7 +52,7 @@ void*	emallocz(uint);
 void*	erealloc(void*, uint);
 char*	estrdup(const char*);
 char*	estrndup(const char*, uint);
-void	fatal(const char*, ...);
+__attribute__((noreturn)) void	fatal(const char*, ...);
 Fmt	fmtbuf(char*, int);
 void*	freelater(void*);
 int	getbase(const char**, long*);
