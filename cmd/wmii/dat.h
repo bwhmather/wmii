@@ -356,7 +356,7 @@ EXTERN Key*	key;
 EXTERN View*	selview;
 EXTERN View*	view;
 
-EXTERN Handlers	framehandler;
+extern Handlers	framehandler;
 
 /* IXP */
 EXTERN IxpServer srv;
