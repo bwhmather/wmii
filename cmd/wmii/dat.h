@@ -360,7 +360,7 @@ extern Handlers	framehandler;
 
 /* IXP */
 EXTERN IxpServer srv;
-EXTERN Ixp9Srv	p9srv;
+extern Ixp9Srv	p9srv;
 
 /* X11 */
 EXTERN uint	numlock_mask;
