@@ -4,6 +4,7 @@
 
 #define _XOPEN_SOURCE 600
 #define IXP_NO_P9_
+
 #include <assert.h>
 #include <regexp9.h>
 #include <stdbool.h>
@@ -25,6 +26,10 @@
 /* From CGO */
 #define assert_equal(x, y) typedef char _##x##_does_not_equal_##y[((x)-(y))*((x)-(y))*-2+1]
 
+#ifndef EXTERN
+#  define EXTERN extern
+#endif
+
 enum Barpos {
 	BBottom,
 	BTop,
@@ -42,7 +47,7 @@ enum {
 	CurNone,
 	CurLast,
 };
-Cursor	cursor[CurLast];
+EXTERN Cursor	cursor[CurLast];
 
 enum IncMode {
 	IIgnore,
@@ -300,10 +305,6 @@ struct View {
 	Rectangle *r;
 	Rectangle *pad;
 };
-
-#ifndef EXTERN
-#  define EXTERN extern
-#endif
 
 /* global variables */
 typedef struct Defs Defs;
