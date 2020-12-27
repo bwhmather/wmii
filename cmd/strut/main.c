@@ -119,7 +119,6 @@ manage(ulong xid) {
 
 	getwinsize(frame);
 	restrut(frame);
-	sethandler(frame, &handlers);
 	selectinput(frame, StructureNotifyMask);
 
 	changeprop_ulong(frame, "_WMII_STRUT", "WINDOW", testtime, nelem(testtime));

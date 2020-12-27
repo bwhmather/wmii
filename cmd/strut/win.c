@@ -5,6 +5,8 @@
 #include <string.h>
 #include "fns.h"
 
+static Handlers handlers;
+
 void
 restrut(Window *frame) {
 	enum { Left, Right, Top, Bottom };
@@ -77,6 +79,7 @@ restrut(Window *frame) {
 #endif
 
 	ewmh_setstrut(frame->aux, strut);
+	sethandler(frame, &handlers);
 }
 
 static bool
@@ -97,7 +100,7 @@ destroy_event(Window *w, void *aux, XDestroyWindowEvent *ev) {
 	return false;
 }
 
-Handlers handlers = {
+static Handlers handlers = {
 	.config = config_event,
 	.destroy = destroy_event,
 };
