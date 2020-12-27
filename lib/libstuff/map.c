@@ -13,7 +13,7 @@ struct MapEnt {
 	MapEnt*		next;
 };
 
-MapEnt *NM;
+MapEnt *NM_;
 
 /* By Dan Bernstein. Public domain. */
 static ulong
@@ -51,7 +51,7 @@ map_getp(Map *map, ulong val, int create) {
 		if(create)
 			insert(map, e, val, nil);
 		else
-			e = &NM;
+			e = &NM_;
 	}
 	return e;
 }
