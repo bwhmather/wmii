@@ -1,5 +1,9 @@
 #include <stdbool.h>
 
+#ifndef EXTERN
+#  define EXTERN extern
+#endif
+
 enum DebugOpt {
 	D9p	= 1<<0,
 	DDnd	= 1<<1,
@@ -20,5 +24,5 @@ void	dwrite(int, void*, int, bool);
 bool	setdebug(int);
 void	vdebug(int, const char*, va_list);
 
-long	debugflag;
-long	debugfile;
+EXTERN long	debugflag;
+EXTERN long	debugfile;
