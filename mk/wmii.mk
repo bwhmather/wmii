@@ -33,7 +33,6 @@ FILTER = sed "s|@ALTDOC@|$(DOC)/alternative_wmiircs|g; \
 	      s|@GLOBALCONF@|$(GLOBALCONF)|g; \
 	      s|@LIBDIR@|$(LIBDIR)|g; \
 	      s|@LOCALCONF@|$(LOCALCONF)|g; \
-	      s|@PYTHON@|$(PYTHON)|g; \
 	      s|@TERMINAL@|$(TERMINAL)|g; \
 	      s|@VERSION@|$(VERSION)|g; \
 	      /^@@/d;"

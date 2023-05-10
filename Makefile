@@ -8,8 +8,7 @@ DIRS = \
 	man	     \
 	lib	     \
 	cmd	     \
-	rc	     \
-	alternative_wmiircs
+	rc
 
 DOCS = FAQ \
        LICENSE \

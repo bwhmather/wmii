@@ -27,8 +27,6 @@ LD = cc
 # Archiver
 AR = ar crs
 
-PYTHON = python
-
 X11PACKAGES = x11 xinerama xrender xrandr
 INCX11 = $$(pkg-config --cflags $(X11PACKAGES))
 LIBIXP = $(LIBDIR)/libixp.a
