@@ -16,31 +16,3 @@ bcat(Biobuf *b, char *name)
 	if(n < 0)
 		fprint(2, "reading %s: %r\n", name);
 }
-
-int
-main(int argc, char **argv)
-{
-	int i;
-	Biobuf b, *bp;
-	Fmt fmt;
-
-	Binit(&bout, 1, O_WRONLY);
-	Bfmtinit(&fmt, &bout);
-	fmtprint(&fmt, "hello, world\n");
-	Bfmtflush(&fmt);
-
-	if(argc == 1){
-		Binit(&b, 0, O_RDONLY);
-		bcat(&b, "<stdin>");
-	}else{
-		for(i=1; i<argc; i++){
-			if((bp = Bopen(argv[i], O_RDONLY)) == 0){
-				fprint(2, "Bopen %s: %r\n", argv[i]);
-				continue;
-			}
-			bcat(bp, argv[i]);
-			Bterm(bp);
-		}
-	}
-	exit(0);
-}
