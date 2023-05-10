@@ -43,6 +43,5 @@ int		utflen(const char*);
 int		utfnlen(const char*, long);
 char*		utfrrune(const char*, long);
 char*		utfrune(const char*, long);
-char*		utfutf(const char*, const char*);
 
 #endif

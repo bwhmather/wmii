@@ -8,7 +8,7 @@
 ..
 .TH RUNE 3
 .SH NAME
-runetochar, chartorune, runelen, runenlen, fullrune, utfecpy, utflen, utfnlen, utfrune, utfrrune, utfutf \- rune/UTF conversion
+runetochar, chartorune, runelen, runenlen, fullrune, utfecpy, utflen, utfnlen, utfrune, utfrrune \- rune/UTF conversion
 .SH SYNOPSIS
 .ta \w'\fLchar*xx'u
 .B #include <utf.h>
@@ -42,9 +42,6 @@ char*	utfrune(char *s, long c)
 .PP
 .B
 char*	utfrrune(char *s, long c)
-.PP
-.B
-char*	utfutf(char *s1, char *s2)
 .SH DESCRIPTION
 These routines convert to and from a
 .SM UTF
@@ -184,8 +181,6 @@ or 0 if there is none.
 If
 .I s2
 is the null string,
-.I utfutf
-returns
 .IR s1 .
 .SH SOURCE
 .B http://swtch.com/plan9port/unix
