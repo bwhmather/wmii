@@ -119,7 +119,7 @@ getprop_long(Display *display, Window w, char *prop, char *type, ulong offset, l
 	int format;
 
 	n = getprop(display, w, prop, type, &actual, &format, offset, (uchar**)ret, length);
-	if(n == 0 || format == 32 && xatom(display, type) == actual)
+	if(n == 0 || (format == 32 && xatom(display, type) == actual))
 		return n;
 	free(*ret);
 	*ret = 0;

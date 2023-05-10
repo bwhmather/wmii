@@ -37,34 +37,34 @@ struct
 } fmtalloc;
 
 static Convfmt knownfmt[] = {
-	' ',	__flagfmt,
-	'#',	__flagfmt,
-	'%',	__percentfmt,
-	'\'',	__flagfmt,
-	'+',	__flagfmt,
-	',',	__flagfmt,
-	'-',	__flagfmt,
-	'C',	__runefmt,	/* Plan 9 addition */
-	'E',	__efgfmt,
-	'G',	__efgfmt,
-	'S',	__runesfmt,	/* Plan 9 addition */
-	'X',	__ifmt,
-	'b',	__ifmt,		/* Plan 9 addition */
-	'c',	__charfmt,
-	'd',	__ifmt,
-	'e',	__efgfmt,
-	'f',	__efgfmt,
-	'g',	__efgfmt,
-	'h',	__flagfmt,
-	'l',	__flagfmt,
-	'n',	__countfmt,
-	'o',	__ifmt,
-	'p',	__ifmt,
-	'r',	__errfmt,
-	's',	__strfmt,
-	'u',	__flagfmt,
-	'x',	__ifmt,
-	0,	nil,
+	{' ',	__flagfmt},
+	{'#',	__flagfmt},
+	{'%',	__percentfmt},
+	{'\'',	__flagfmt},
+	{'+',	__flagfmt},
+	{',',	__flagfmt},
+	{'-',	__flagfmt},
+	{'C',	__runefmt},	/* Plan 9 addition */
+	{'E',	__efgfmt},
+	{'G',	__efgfmt},
+	{'S',	__runesfmt},	/* Plan 9 addition */
+	{'X',	__ifmt},
+	{'b',	__ifmt},		/* Plan 9 addition */
+	{'c',	__charfmt},
+	{'d',	__ifmt},
+	{'e',	__efgfmt},
+	{'f',	__efgfmt},
+	{'g',	__efgfmt},
+	{'h',	__flagfmt},
+	{'l',	__flagfmt},
+	{'n',	__countfmt},
+	{'o',	__ifmt},
+	{'p',	__ifmt},
+	{'r',	__errfmt},
+	{'s',	__strfmt},
+	{'u',	__flagfmt},
+	{'x',	__ifmt},
+	{0,	nil},
 };
 
 
